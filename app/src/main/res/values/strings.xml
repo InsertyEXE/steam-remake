@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Steam remaked</string>
+    <string name="nao_tem_uma_conta"><b> Cadastre-se no Steam </b> e descubra milhares de jogos para jogar.</string>
+    <string name="email">Email</string>
+    <string name="comecarJogos">Vamos começar os jogos!</string>
+    <string name="senha">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="nome_usuario_steam">Nome de usuário Steam</string>
+    <string name="ou">Ou</string>
+    <string name="proximo">Proximo</string>
+    <string name="paisorigem">País de residência</string>
+    <string name="politica_termos">Tenho 13 anos de idade ou mais e aceito os termos do <b>Acordo de Assinatura do Steam</b> e da <b>Política de Privacidade da Valve.</b></string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="adicionar_foto">Adicionar foto</string>
+    <string name="pular">Pular</string>
+    <string name="adicionar_foto_perfil">Adicionar uma foto do perfil</string>
+    <string name="disclaimer_foto">Coloque uma identidade para seu perfil! Você pode adicionar uma foto de perfil posteriormente</string>
+    <string name="steam_guard">Steam Guard</string>
+    <string name="loja">Loja</string>
+    <string name="biblioteca">Biblioteca</string>
+    <string name="perfil">Perfil</string>
+    <string name="amigos_comunidade">Amigos e comunidade</string>
+    <string name="suporte">Suporte</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="fale_gente">Fale com a gente</string>
+
+</resources>

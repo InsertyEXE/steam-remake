@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_main_steamGuard"
+            android:icon="@drawable/shield"
+            android:title="@string/steam_guard" />
+
+        <item
+            android:id="@+id/menu_main_perfil"
+            android:icon="@drawable/perfil_de_usuario"
+            android:title="@string/perfil" />
+
+    </group>
+
+    <group>
+
+        <item
+            android:title="dinheiro 🦀"
+            android:titleCondensed="@string/adicionar_foto">
+
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/menu_main_loja"
+                        android:icon="@drawable/store"
+                        android:title="@string/loja" />
+
+                    <item
+                        android:id="@+id/menu_main_biblioteca"
+                        android:icon="@drawable/console"
+                        android:title="@string/biblioteca" />
+
+                    <item
+                        android:id="@+id/menu_main_amigos_comunidade"
+                        android:icon="@drawable/community"
+                        android:title="@string/amigos_comunidade" />
+
+
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group>
+
+        <item
+            android:id="@+id/item_fale_gente"
+            android:title="@string/fale_gente">
+
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/menu_main_suporte"
+                        android:icon="@drawable/support"
+                        android:title="@string/suporte" />
+
+                    <item
+                        android:id="@+id/menu_main_configuracoes"
+                        android:icon="@drawable/configuracoes"
+                        android:title="@string/configuracoes" />
+
+                </group>
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

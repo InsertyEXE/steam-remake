@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".login.view.LoginActivity">
+
+
+            <ImageView
+                android:id="@+id/login_img_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/steam_logo"
+               />
+
+            <TextView
+                android:id="@+id/login_txt_slogan"
+                style="@style/Theme.SteamRemaked.FormTextView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="@string/comecarJogos"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/login_img_logo"
+                app:layout_constraintStart_toStartOf="@id/login_img_logo"
+                app:layout_constraintTop_toBottomOf="@id/login_img_logo" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_edt_nomeUsuario_layout"
+                style="@style/Theme.SteamRemaked.FormTextInput"
+                android:layout_marginTop="32dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_txt_slogan"
+                app:startIconDrawable="@drawable/ic_baseline_pessoal_outline_24"
+                app:startIconTint="@color/azul_claro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_edt_nomeUsuario"
+                    style="@style/Theme.SteamRemaked.FormEditText"
+                    android:hint="@string/nome_usuario_steam"
+                    android:inputType="textEmailAddress"
+
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_edt_senha_layout"
+                style="@style/Theme.SteamRemaked.FormTextInput"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_edt_nomeUsuario_layout"
+                app:startIconDrawable="@drawable/ic_baseline_senha_24"
+                app:startIconTint="@color/azul_claro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_edt_senha"
+                    style="@style/Theme.SteamRemaked.FormEditText"
+                    android:hint="@string/senha"
+                    android:inputType="textPassword" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.example.steamremaked.ui.util.LoadingButton
+                android:id="@+id/login_btn_entrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:enabled="true"
+                app:layout_constraintEnd_toEndOf="@id/login_edt_senha_layout"
+                app:layout_constraintStart_toStartOf="@id/login_edt_senha_layout"
+                app:layout_constraintTop_toBottomOf="@id/login_edt_senha_layout"
+                app:text="@string/login" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@id/login_txt_cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/login_txt_cadastrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:padding="24dp"
+        android:text="@string/nao_tem_uma_conta"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/preto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
