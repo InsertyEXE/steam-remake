@@ -23,10 +23,6 @@ class LojaFragment : Fragment(R.layout.fragment_main_loja) {
 
         binding?.let {
             with(it) {
-                lojaRvDestaque.layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, true)
-                lojaRvDestaque.adapter = DestaqueAdapter()
-
 
                 lojaRvOfertas.layoutManager =
                     LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, true)
@@ -37,31 +33,6 @@ class LojaFragment : Fragment(R.layout.fragment_main_loja) {
                 lojaRvConteudo.adapter = ConteudoAdapter()
             }
         }
-    }
-
-    private class DestaqueAdapter : RecyclerView.Adapter<DestaqueAdapter.DestaqueViewHolder>() {
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DestaqueViewHolder {
-            return DestaqueViewHolder(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_loja_destaque, parent, false)
-            )
-        }
-
-        override fun onBindViewHolder(holder: DestaqueViewHolder, position: Int) {
-            holder.bind(R.drawable.placeholder)
-        }
-
-        override fun getItemCount(): Int {
-            return 5
-        }
-
-        private class DestaqueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            fun bind(placeholder: Int) {
-                itemView.findViewById<ImageView>(R.id.item_img_destaque)
-            }
-        }
-
     }
 
     private class OfertaAdapter : RecyclerView.Adapter<OfertaAdapter.OfertaViewHolder>() {
