@@ -32,15 +32,16 @@
         </com.google.android.material.appbar.AppBarLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    <!--<fragment
+
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.steamremaked.cadastro.view.CadastroFotoFragment"
-        tools:layout="@layout/fragment_cadastro_foto"
+        tools:layout="@layout/fragment_main_loja"
+        android:name="com.example.steamremaked.main.view.LojaFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>-->
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/main_nav"
