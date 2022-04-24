@@ -1,29 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_main">
+    android:background="@drawable/background_main"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/loja_txt_destaque"
-        style="@style/Theme.SteamRemaked.FormTextView"
-        android:text="Destaques"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        tools:listitem="@layout/item_loja_destaque"
-        tools:itemCount="5"
-        app:layout_constraintTop_toBottomOf="@id/loja_txt_destaque"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/loja_txt_destaque"
+            style="@style/Theme.SteamRemaked.FormTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/destaque"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/loja_rv_destaque"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_loja_destaque"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loja_txt_destaque"
+           />
+
+        <TextView
+            android:id="@+id/loja_txt_ofertas"
+            style="@style/Theme.SteamRemaked.FormTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/ofertas_especiais"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loja_rv_destaque" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/loja_rv_ofertas"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loja_txt_ofertas"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_loja_ofertas" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav_main"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:itemIconTint="@color/azul_claro"
+            app:itemTextColor="@color/white"
+            android:background="@drawable/bottomnav_style"
+            app:menu="@menu/menu_main_categoria"
+            app:layout_constraintTop_toBottomOf="@id/loja_rv_ofertas"
+            app:layout_constraintBottom_toTopOf="@id/loja_rv_conteudo"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/loja_rv_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/item_loja_conteudo"
+            app:layout_constraintTop_toBottomOf="@id/bottomNav_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

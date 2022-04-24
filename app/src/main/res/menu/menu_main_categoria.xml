@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_categoria_news"
+        android:icon="@drawable/ic_new_24"
+        android:title="@string/novidades"/>
+
+    <item android:id="@+id/menu_categoria_maisVendido"
+        android:icon="@drawable/ic_new_24"
+        android:title="@string/mais_vendidos"/>
+
+    <item android:id="@+id/menu_categoria_maisAguardado"
+        android:icon="@drawable/ic_new_24"
+        android:title="@string/mais_aguardado"/>
+
+    <item android:id="@+id/menu_categoria_oferta"
+        android:icon="@drawable/ic_new_24"
+        android:title="@string/ofertas"/>
+</menu>
