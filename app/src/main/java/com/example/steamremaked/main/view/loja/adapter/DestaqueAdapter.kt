@@ -31,7 +31,7 @@ class DestaqueAdapter(val itens: List<Destaque>) :
         holder.bind(itens[position])
     }
 
-    override fun getItemCount() = itens.size
+    override fun getItemCount() = 5
 
 
 }
