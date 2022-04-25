@@ -9,39 +9,59 @@
     tools:context=".main.view.MainActivity"
     tools:openDrawer="start">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true">
+            android:backgroundTint="@color/preto"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.MaterialToolbar
+
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/main_toolbar"
                 style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/preto"
-                android:elevation="0dp"
-                app:navigationIcon="@drawable/ic_menu_24" />
+                android:backgroundTint="@color/preto"
+                app:navigationIcon="@drawable/ic_menu_24"
+                app:title="@string/app_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    >
+
+                    <ImageView
+                        android:id="@+id/main_toolbar_carrinho"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/carrinho"
+                        app:tint="@color/azul_claro"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_main_loja"
-        android:name="com.example.steamremaked.main.view.LojaFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <FrameLayout
+            android:name="com.example.steamremaked.main.view.LojaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            tools:layout="@layout/fragment_main_loja" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/main_nav"
@@ -51,7 +71,6 @@
         app:headerLayout="@layout/header_main_drawer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

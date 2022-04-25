@@ -30,5 +30,5 @@ class OfertaAdapter(val itens: List<Oferta>) : RecyclerView.Adapter<OfertaAdapte
         holder.bind(itens[position])
     }
 
-    override fun getItemCount() = itens.size
+    override fun getItemCount() = 5
 }

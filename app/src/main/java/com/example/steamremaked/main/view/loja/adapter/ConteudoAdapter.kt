@@ -34,5 +34,5 @@ class ConteudoAdapter(val itens: List<Conteudo>) : RecyclerView.Adapter<Conteudo
         holder.bind(itens[position])
     }
 
-    override fun getItemCount() = itens.size
+    override fun getItemCount() = 5
 }

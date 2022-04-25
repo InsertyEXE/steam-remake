@@ -6,6 +6,7 @@ import com.example.steamremaked.R
 import com.example.steamremaked.databinding.ActivityMainBinding
 
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
