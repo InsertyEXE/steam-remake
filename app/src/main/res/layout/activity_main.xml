@@ -53,12 +53,19 @@
         </com.google.android.material.appbar.AppBarLayout>
 
 
-        <FrameLayout
+       <!-- <FrameLayout
             android:name="com.example.steamremaked.main.view.LojaFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-            tools:layout="@layout/fragment_main_loja" />
+            tools:layout="@layout/fragment_main_loja" />-->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_main_perfil"
+            android:name="com.example.steamremaked.main.view.perfil.view.PerfilFragment"
+            android:id="@+id/fragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

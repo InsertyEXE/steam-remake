@@ -5,8 +5,6 @@ import android.os.Bundle
 import com.example.steamremaked.R
 import com.example.steamremaked.databinding.ActivityMainBinding
 
-
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -17,16 +15,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        with(binding){
+        with(binding) {
 
             mainToolbar.setNavigationOnClickListener {
                 mainDrawer.open()
             }
 
             mainNav.setNavigationItemSelectedListener { menuItem ->
-                menuItem.isChecked = true
 
+                menuItem.isChecked
 
+                mainDrawer.close()
                 true
             }
         }
