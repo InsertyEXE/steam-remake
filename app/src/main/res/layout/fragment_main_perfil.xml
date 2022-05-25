@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main">
+
+    <TextView
+        android:id="@+id/perfil_txt_nome"
+        style="@style/Theme.SteamRemaked.FormTextView"
+        android:layout_width="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLines="1"
+        android:text="@string/nome_usuario_steam"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/perfil_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/profile_txt_bio"
+        app:layout_constraintEnd_toEndOf="@+id/perfil_txt_nome"
+        app:layout_constraintStart_toStartOf="@id/perfil_txt_nome"
+        app:layout_constraintTop_toBottomOf="@id/perfil_txt_nome">
+
+        <ImageView
+            android:id="@+id/perfil_img_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/perfil_txt_nivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_light"
+        android:singleLine="true"
+        android:text="@string/nivel"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/perfil_card"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carview_medalha"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/cinza_fundo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/perfil_card"
+        app:layout_constraintTop_toBottomOf="@id/perfil_txt_nivel">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_medium"
+            android:singleLine="true"
+            android:text="@string/teste"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="15dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="500 XP"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/perfil_edt_editarPerfil"
+        style="@style/Theme.SteamRemaked.FormButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:backgroundTint="@color/azul_escuro"
+        android:text="@string/editar_perfil"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/carview_medalha"
+        app:layout_constraintStart_toStartOf="@id/carview_medalha"
+        app:layout_constraintBottom_toBottomOf="@id/perfil_card"
+        app:layout_constraintTop_toBottomOf="@id/carview_medalha" />
+
+    <TextView
+        android:id="@+id/profile_txt_bio"
+        style="@style/Theme.SteamRemaked.FormTextView"
+        android:layout_marginTop="32dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/teste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil_card" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/view_perfil_style"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_txt_bio"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
